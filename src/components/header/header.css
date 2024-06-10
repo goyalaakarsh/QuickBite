@@ -64,6 +64,14 @@
     color: var(--title-color);
 }
 
+.header-user-logo {
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+    border-radius: 50%;
+    border: 1.5px solid black;
+}
+
 .nav_icon,
 .nav_close,
 .nav_toggle {

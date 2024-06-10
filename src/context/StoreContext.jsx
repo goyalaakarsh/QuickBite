@@ -223,7 +223,7 @@ export const DishList = [
         name: "Veg Sandwich",
         image: food_23,
         price: 18,
-        description: "Fresh vegetables stacked between slices of whole grain bread.",
+        description: "Fresh vegetables stacked between slices of grain bread.",
         category: "Sandwich"
     },
     {

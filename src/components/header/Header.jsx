@@ -57,7 +57,8 @@ const Header = () => {
                         <i className="fa-solid fa-cart-shopping nav_btn-icon"></i>
                     </a>
 
-                    <button className='button' id='nav_signin'>Sign in</button>
+                    {/* <button className='button' id='nav_signin'>Sign in</button> */}
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/005/788/original/user-icon-in-trendy-flat-style-isolated-on-grey-background-user-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-free-vector.jpg" alt="" className='header-user-logo'/>
                 </div>
                 <div className="nav_toggle" onClick={() => showMenu(!Toggle)}>
                     <i className="uil uil-apps"></i>

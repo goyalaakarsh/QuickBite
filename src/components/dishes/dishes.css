@@ -122,6 +122,9 @@
 
 .dish_description {
     font-size: 0.8rem;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .dish_name {
