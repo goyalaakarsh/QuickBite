@@ -90,7 +90,9 @@ const Cart = () => {
           {cartItems.length === 0 ? (
             <div className="cart_items_empty">Your cart is empty</div>
           ) : (
-            <div className="cart_items">
+            <div>
+              <div className="cart_items">
+              
               {cartItems.map((item) => (
                 <CartItem
                   key={item._id}
@@ -100,9 +102,12 @@ const Cart = () => {
                 />
               ))}
             </div>
+            <Checkout totalPrice={totalPrice} />
+            </div>
+            
           )}
 
-          <Checkout totalPrice={totalPrice} />
+          
         </div>
       </div>
     </section>

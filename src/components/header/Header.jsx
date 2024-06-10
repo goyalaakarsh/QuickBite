@@ -52,11 +52,11 @@ const Header = () => {
 
                 <div className='nav_btns grid'>
 
-                <i className="uil uil-search nav_btn-icon"></i>
+                    {/* <i className="uil uil-search nav_btn-icon"></i> */}
                     <a href="/cart" >
-                    <i className="fa-solid fa-cart-shopping nav_btn-icon"></i>
+                        <i className="fa-solid fa-cart-shopping nav_btn-icon"></i>
                     </a>
-                    
+
                     <button className='button' id='nav_signin'>Sign in</button>
                 </div>
                 <div className="nav_toggle" onClick={() => showMenu(!Toggle)}>

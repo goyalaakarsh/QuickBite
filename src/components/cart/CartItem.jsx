@@ -23,6 +23,7 @@ const CartItem = ({ item, removeFromCart, updateQuantity }) => {
           type="number"
           value={quantity}
           min="1"
+          max={10}
           onChange={handleQuantityChange}
           className="cart-item-quantity-input"
         />

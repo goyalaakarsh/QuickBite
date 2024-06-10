@@ -17,7 +17,7 @@ const AppRoutes = () => {
           {/* Add more routes as needed */}
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

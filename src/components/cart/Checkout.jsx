@@ -2,7 +2,7 @@ import React from 'react';
 
 const Checkout = ({ totalPrice }) => {
   // Assuming tax rate is 10%
-  const taxRate = 0.1;
+  const taxRate = 0.05;
   const subtotal = totalPrice;
   const tax = subtotal * taxRate;
   const total = subtotal + tax;
@@ -15,14 +15,14 @@ const Checkout = ({ totalPrice }) => {
           <div>Subtotal</div> <div>${subtotal.toFixed(2)}</div>
         </div>
         <div className="tax">
-          <div>Tax (10%)</div> <div>${tax.toFixed(2)}</div>
+          <div>Tax (5%)</div> <div>${tax.toFixed(2)}</div>
         </div>
         <div className="total">
           <div>Total</div> <div>${total.toFixed(2)}</div>
         </div>
       </div>
 
-      <a href="" className="checkout-btn button">Checkout</a>
+      <a href="/" className="checkout-btn button">Checkout</a>
     </div>
   );
 };
