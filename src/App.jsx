@@ -11,14 +11,11 @@ import { MenuList } from './context/StoreContext';
 import Home from './pages/home/Home'
 import AppRoutes from './Routes';
 import { StoreProvider } from './context/StoreContext';
-import { CartProvider } from './context/CartContext';
 
 const App = () => {
   return (
     <StoreProvider>
-      <CartProvider>
         <AppRoutes />
-      </CartProvider>
     </StoreProvider>
   );
 }

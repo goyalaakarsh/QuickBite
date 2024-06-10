@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import CartItem from './CartItem';
 import './cart.css';
+import Checkout from './Checkout';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     fetch('http://localhost:5000/api/cart')
@@ -16,10 +18,16 @@ const Cart = () => {
       .then(data => {
         if (data && data.cartItems) {
           setCartItems(data.cartItems);
+          calculateTotalPrice(data.cartItems);
         }
       })
       .catch(error => console.error('Error fetching cart items:', error));
   }, []);
+
+  const calculateTotalPrice = (items) => {
+    const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    setTotalPrice(total);
+  };
 
   const removeFromCart = (itemId) => {
     fetch(`http://localhost:5000/api/cart/remove/${itemId}`, {
@@ -34,6 +42,7 @@ const Cart = () => {
       .then(data => {
         if (data.success) {
           setCartItems(data.cartItems);
+          calculateTotalPrice(data.cartItems);
         } else {
           console.error('Error removing item from cart');
         }
@@ -58,6 +67,7 @@ const Cart = () => {
       .then(data => {
         if (data.success) {
           setCartItems(data.cartItems);
+          calculateTotalPrice(data.cartItems);
         } else {
           console.error('Error updating quantity:', data.message);
         }
@@ -91,6 +101,8 @@ const Cart = () => {
               ))}
             </div>
           )}
+
+          <Checkout totalPrice={totalPrice} />
         </div>
       </div>
     </section>
