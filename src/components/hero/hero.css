@@ -1,0 +1,58 @@
+/* .hero_container {
+    padding-top: calc(var(--header-height) + 3rem);
+} */
+
+.hero_card {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden; 
+    border-radius: 1rem;
+}
+
+.hero_card-image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.6; /* Set the opacity of the black overlay */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Position it below the overlay text */
+}
+
+.hero_card-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    position: absolute; /* Ensure it covers the whole parent div */
+    top: 0;
+    left: 0;
+    z-index: 0; /* Position it below the black overlay */
+}
+
+.hero_card-overlay {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: white;
+    z-index: 2; /* Ensure it appears above the background image and overlay */
+}
+
+.hero_overlay-maintxt {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.hero_card-overlay p {
+    max-width: 600px;
+}
+
+.hero_overlay-btn {
+    margin-top: 1rem;
+    background-color: var(--title-yellow);
+    color: black;
+}

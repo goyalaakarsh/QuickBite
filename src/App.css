@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --header-height: 3rem;
+
+  /* Colors */
+  /* Color mode HSL (hue, saturation, lightness) */
+  --hue: 0;
+  --sat: 0%;
+  --title-color: hsl(169, 63%, 40%);
+  --title-color-dark: hsl(169, 63%, 15%);
+  --title-yellow: #E2AC24;
+  --text-color: black;
+  --text-color-light: hsl(var(--hue), var(--sat), 46%);
+  --body-color: hsl(169, 63%, 98%);
+  --container-color: #fff;
+
+
+  /* Font and typography */
+  --body-font: "Poppins", sans-serif;
+
+  /* Margins Bottom */
+  /* 0.5rem = 8px | 1rem = 16px */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* Z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  /* Font Sizes */
+  --big-font-size: 3.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
+/* Disable text selection for the entire page */
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;         /* Standard syntax */
+}
+
+
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Reusable CSS classes */
+.section {
+  padding: 2rem 0 2rem;
+  
+
+}
+
+.section_title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+}
+
+.section_title {
+  position: relative;
+  display: inline-block; 
+  margin-bottom: 1.5rem; 
+}
+
+.section_title::after {
+  content: "";
+  position: absolute;
+  width: 80px; /* Set the width of the underline */
+  height: 4px; /* Set the height of the underline */
+  background-color: var(--title-yellow); /* Use the color variable */
+  bottom: -0.5rem; /* Adjust as necessary for spacing below the title */
+  left: 0; /* Align it to the left */
+}
+
+
+.section_subtitle {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: var(--small-font-size);
+}
+
+.section_title,
+.section_subtitle {
+  text-align: left;
+}
+
+.divider {
+  height: 2.5px;
+  width: 100%;
+  background-color: var(--text-color-light);
+  opacity: 0.3;
+  border-radius: 15px;
+  margin: 2rem 0 0 0;
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 0.75rem 2rem;
+  border-radius: 0.6rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--title-color-dark);
+}
+
+.button_icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+}
+
+/* For 768px and below */
+@media screen and (max-width: 768px) {
+  /* Your CSS rules for screens 768px and below */
+}
+
+/* For 576px and below */
+@media screen and (max-width: 576px) {
+  /* Your CSS rules for screens 576px and below */
+}
+
+/* For 350px and below */
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}

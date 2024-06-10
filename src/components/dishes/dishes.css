@@ -1,0 +1,146 @@
+.dish_item_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.dish_card {
+    width: 250px;
+    border-radius: 0.5rem;
+    background-color: var(--container-color);
+    /* height: 320px; */
+    box-sizing: border-box;
+    /* padding: 0.7rem; */
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.11);
+    
+}
+
+.dish_card-img {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+}
+
+.dish_img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* height: 200px; */
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.dish_cat {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    cursor: pointer;
+    background: var(--title-color);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    /* display: ${props => props.showCounter ? 'none' : 'block'}; */
+}
+.dish_card-add {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    /* display: ${props => props.showCounter ? 'none' : 'block'}; */
+}
+
+.dish_card-counter {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    /* width: 90px; */
+    height: 30px;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    /* display: ${props => props.showCounter ? 'block' : 'none'}; */
+}
+
+.dish_counter-sub {
+    background-color: rgba(218, 88, 88, 0.71);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dish_counter-num {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dish_counter-add {
+    background-color: rgba(121, 226, 152, 0.658);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dish_details {
+    padding: 1rem 1rem;
+}
+
+.dish_description {
+    font-size: 0.8rem;
+}
+
+.dish_name {
+    color: var(--text-color);
+}
+
+.dish_price {
+    font-size: 1.10rem;
+    margin-top: 0.5rem;
+}
+
+.dish_card-star {
+    color: var(--title-yellow);
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+}
+
+.price-stars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
