@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "src"
+      "dest": "src/Routes.jsx"
     }
   ]
 }
