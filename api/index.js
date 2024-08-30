@@ -13,6 +13,10 @@ app.get('/api/cart', (req, res) => {
     res.json({ cartItems });
 });
 
+app.get("/cart", (req, res) => {
+    res.send("Working!");
+});
+
 // Add item to cart
 app.post('/api/cart/add', (req, res) => {
     const { item } = req.body;
@@ -49,9 +53,6 @@ app.delete('/api/cart/remove/:id', (req, res) => {
     res.json({ success: true, message: 'Item removed from cart', cartItems });
 });
 
-app.get("/cart", (req, res) => {
-    res.send("Working!")
-});
 
 
 const PORT = process.env.PORT || 5000;
