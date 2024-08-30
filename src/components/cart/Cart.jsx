@@ -8,7 +8,7 @@ const Cart = () => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/cart')
+    fetch('https://quickbite-aakarshgoyal.vercel.app/api/cart')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch cart items');
@@ -30,7 +30,7 @@ const Cart = () => {
   };
 
   const removeFromCart = (itemId) => {
-    fetch(`http://localhost:5000/api/cart/remove/${itemId}`, {
+    fetch(`https://quickbite-aakarshgoyal.vercel.app/api/cart/remove/${itemId}`, {
       method: 'DELETE',
     })
       .then(response => {
@@ -51,7 +51,7 @@ const Cart = () => {
   };
 
   const updateQuantity = (itemId, newQuantity) => {
-    fetch(`http://localhost:5000/api/cart/update/${itemId}`, {
+    fetch(`https://quickbite-aakarshgoyal.vercel.app/api/cart/update/${itemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -92,22 +92,22 @@ const Cart = () => {
           ) : (
             <div>
               <div className="cart_items">
-              
-              {cartItems.map((item) => (
-                <CartItem
-                  key={item._id}
-                  item={item}
-                  removeFromCart={removeFromCart}
-                  updateQuantity={updateQuantity}
-                />
-              ))}
+
+                {cartItems.map((item) => (
+                  <CartItem
+                    key={item._id}
+                    item={item}
+                    removeFromCart={removeFromCart}
+                    updateQuantity={updateQuantity}
+                  />
+                ))}
+              </div>
+              <Checkout totalPrice={totalPrice} />
             </div>
-            <Checkout totalPrice={totalPrice} />
-            </div>
-            
+
           )}
 
-          
+
         </div>
       </div>
     </section>

@@ -64,7 +64,7 @@ const Dishes = () => {
             image: dish.image,
         };
 
-        fetch('http://localhost:5000/api/cart/add', {
+        fetch('https://quickbite-aakarshgoyal.vercel.app/api/cart/add', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ item: newItem }),
