@@ -13,7 +13,7 @@ app.get('/api/cart', (req, res) => {
     res.json({ cartItems });
 });
 
-app.get("/cart", (req, res) => {
+app.get('/cart', (req, res) => {
     res.send("Working!");
 });
 
