@@ -43,9 +43,6 @@ app.put('/api/cart/update/:id', (req, res) => {
     res.json({ success: true, message: 'Item quantity updated', cartItems });
 });
 
-
-// Remove item from cart
-// Remove item from cart
 app.delete('/api/cart/remove/:id', (req, res) => {
     const itemId = parseInt(req.params.id);
     cartItems = cartItems.filter(item => item._id !== itemId);
