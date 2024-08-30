@@ -49,6 +49,12 @@ app.delete('/api/cart/remove/:id', (req, res) => {
     res.json({ success: true, message: 'Item removed from cart', cartItems });
 });
 
+app.get("/cart", (req, res) => {
+    res.send("Working!")
+});
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
